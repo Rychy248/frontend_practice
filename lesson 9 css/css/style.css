@@ -1,0 +1,40 @@
+/*
+ES UNA EXCELENTE PAGINA PARA ADQUIRIR COLORES QUE VAYAMOS NECESITANDO PARA DAR 
+UNA COMBINACION BONITA A NUESTRA PAGINA WEB
+https://coolors.co/
+
+PARA ESTE EJERCICIO VOY A UTILIZAR*/
+:root{
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #0a9396;
+    --color4: #94d2bd;
+    --color5: #e9d8a6;
+    --color6: #ee9b00;
+    --color7: #ca6702;
+    --color8: #bb3e03;
+    --color9: #ae2012;
+    --color10: #9b2226;
+}
+/*^^^^ VARIABLES GLOBALES*/
+h1{
+    color: var(--color7);
+    background-color: var(--color1);
+    padding: 15px;
+    border: 10px solid var(--color7);
+    margin: 20px;
+    text-align: center;
+}
+p{
+    color: var(--color1);
+    background-color: var(--color5);
+    padding: 15px;
+    border: 10px solid var(--color9);
+    /*margin-top: 40px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;*/
+    margin:40px 30px 20px 10px; /*top right bottom left*/
+    margin:auto 50px; /*centramos el margin, 50px a derecha e izquierda, elimina el margin anterior*/
+    text-align: center; /*centramos el texto*/
+}

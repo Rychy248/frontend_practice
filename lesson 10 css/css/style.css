@@ -1,0 +1,43 @@
+:root{
+    --color_background:#000000;
+    --color_border:#14213d;
+    --color_text1:#fca311;
+    --color_text2:#e5e5e5;
+    --color_text3:#ffffff;
+    --color_estado0:#ef476f;
+    --color_estado1:#ffd166;
+    --color_estado2:#06d6a0;
+    --color_estado3:#ffafcc;
+}
+
+body{
+    background-color: var(--color_background);
+}
+
+h1{
+    text-align: center;
+    color: var(--color_text3);
+}
+
+p{
+    text-align: left;
+    color: var(--color_text2);
+}
+
+a:link{ /*estado -no click*/
+    color: var(--color_estado0);
+    text-decoration: none; /*quitamos el subrayado de los enlaces*/
+}
+a:visited{ /*estdo -clickeado*/
+    color: var(--color_estado1);
+    text-decoration: none;
+    /*quitamos el subrayado de los enlaces*/
+}
+a:hover{ /*sobre el enlace*/
+    color: var(--color_estado2);
+    text-decoration: underline;
+}
+a:active{
+    color: var(--color_estado3);
+    text-decoration: none;
+}
