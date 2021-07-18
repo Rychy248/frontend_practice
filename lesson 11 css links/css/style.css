@@ -32,16 +32,20 @@ a:link, a:active{ /*dos obejtos con el mismo estilo*/
     padding:15px 25px; /*dos={1:izquierda y derecha; 2:arriva y abajo}*/
     text-align: center;
     text-decoration: none;
-    display: inline-block; /*Para que los bloques no se coloquen uno sobre el otro*/
+    display: block; /*Para que los bloques no se coloquen uno sobre el otro*/
 }
 
 a:visited{ /*estdo -clickeado*/
     color: var(--color_estado1);
+    padding:15px 25px;
+    border: 10px solid var(--color_background);
     text-decoration: none;
     /*quitamos el subrayado de los enlaces*/
 }
 a:hover{ /*sobre el enlace*/
     color: var(--color_background);
     text-decoration: underline;
+    padding:15px 25px;
+    border: 10px solid var(--color_estado1);
     background-color: var(--color_text1);
 }

@@ -1,0 +1,60 @@
+:root {
+  --color_background: #000000;
+  --color_border: #14213d;
+  --color_text1: #fca311;
+  --color_text2: #ca69e7;
+  --color_text3: #ffffff;
+  --color_text4: #35b1e2;
+  --color_estado0: #ef476f;
+  --color_estado1: #ffd166;
+  --color_estado2: #06d6a0;
+  --color_estado3: #ffafcc;
+}
+
+body {
+  background-color: var(--color_background);
+}
+
+h1 {
+  text-align: center;
+  color: var(--color_text1);
+}
+
+p {
+  text-align: left;
+  color: var(--color_text4);
+}
+table,td,th {
+  border-collapse: collapse;
+  border: 1px solid var(--color_text3);
+  /*border-spacing: 4px; con espacio en bordes, no se pude tener un border-collapse*/
+  padding: 5px;
+}
+caption {
+    text-align: center;
+    color: var(--color_text2);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height: 30px;
+}
+table {
+  width: 100%;
+}
+/*nth-child permite definir funciones*/
+/*lo que hace la siguiente funcion es aplicar solo a renglones pares*/
+tr:nth-child(even) { 
+    background-color: var(--color_text4);
+    color: var(--color_background);
+}
+/*tr:nth-child(odd) { renglones pares
+    color: var(--color_estado1);
+}*/
+th {
+  color: var(--color_background);
+  background-color:var(--color_estado0);
+  text-align: center;
+}
+td {
+  color: var(--color_text3);
+  text-align: left;
+}

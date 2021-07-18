@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T A B L A S</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1>NO HE TOCADO NADA DE ACA</h1>
+    <h2>Clientes</h2>
+    <!--Las tablas son una construccion de una serie de etiquetas
+        anidadas para su contruccion estas no se pueden construir con una sola etiqueta-->
+    <!--
+        <table></table> = iniciamos una tabla
+        <tr></tr>       = table row, definimos una fila de tabla
+            <th></th>   = table head, cabecero de tabla, no es obligatorio
+            <td></td>   = table data, con esto metemos datos a la tabla
+    -->
+    <table >
+        <caption>Listado de clientes</caption>
+        <tr>
+            <th colspan="2">Nombre&nbsp;Apellido</th>
+            <!-- <th>Apellido</th> -->
+            <th>Email</th>
+            <!--colspan es directamente una propiedad en html, no css
+            une "cols" columnas
+            <th colspan=2>Apellido1 Apellido2</th> al usar dos celdas, podemos precindir de esta celda-->
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>Perez</td>
+            <td rowspan="2">compartido@gmail.com</td>
+            <!-- de momento no la uso, por el css
+            <td rowspan="2">correocompartido@gmail.com</td>
+            rowspan es directamente una propiedad en html, no css
+            une "rows" filas-->
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Urizar</td>
+            <!-- <td>mariaurizar@gmail.com</td> -->
+            <!--<td>mariaurizar@gmail.com</td> email en desuso -->
+        </tr>
+        <tr>
+            <td>Mynda</td>
+            <td>Macario</td>
+            <td>myndamacario@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>Juarez</td>
+            <td>carlosjuarez@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Karla</td>
+            <td>Sparza</td>
+            <td>karlasparza@gmail.com</td>
+        </tr>
+    </table>
+</body>
+
+</html>
