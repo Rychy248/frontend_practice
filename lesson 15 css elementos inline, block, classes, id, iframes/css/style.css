@@ -1,0 +1,90 @@
+:root {
+  --color_background: #fdf0d5;
+  --color_border1: #780000;
+  --color_border2: #003049;
+  --color_text1: #c1121f;
+  --color_text2: #0466c8;
+}
+/*con el asterisco y llaves, podemos dar generalizaciones sobre nuestra hoja de 
+estilos, similara a regex, * representa tood*/
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--color_background);
+}
+/*con el simbolo almohadilla, especificamos que vamos a crear un 
+elmento especial, es decir un elemento "ID", a diferencia del elmento class
+que es el que sique a este, el elmento ID, solamente puede aparecer una vez
+en toda la pagina HTML*/
+#ide_titulo_principal{
+  color: var(--color_border1);
+  text-align: center;
+}
+
+/*en vez de h1{}, vamos a crear una clase h1, las clases a didrerencia de los
+elementos ID, pueden aparecer infinitas veces en una misma pagina HTML*/
+.titulo1 {
+  color: var(--color_text1);
+  text-align: center;
+  margin: 15px;
+}
+h2 {
+  color: var(--color_text1);
+}
+p {
+  color: var(--color_text2);
+}
+span {
+  color: var(--color_border1);
+  border: 1px solid var(--color_text2);
+}
+.tarjeta { /*con el punto, indicamos que haremos uso de una clase, 
+  luego del putno continuaria el nombre de la clase que deseamos*/
+  color: var(--color_text2);
+  border: 10px solid var(--color_border2);
+  background-color: var(--color_text2);
+  text-align: center;
+  margin: 15px 100px;
+  padding: 15px;
+}
+.tarjeta p, .tarjeta h2{
+  color: var(--color_background);
+}
+.resaltado{
+  color:var(--color_text2);
+}
+.otra_clase{
+  border: 1px solid var(--color_background);
+  background-color: var(--color_border2);
+}
+/* div {  ELEMENTO QUE PASAMOS A TARJETA
+  color: var(--color_text2);
+  border: 10px solid var(--color_border2);
+  background-color: var(--color_text2);
+  text-align: center;
+}
+div p, div h2 {
+  color: var(--color_background);
+} */
+
+.marco{
+  width: 100%;
+  border: 1px solid var(--color_border2);
+}
+.centrar{
+  text-align: center;
+}
+.boton{
+ background-color: yellowgreen;
+ border: 2px solid var(--color_border2);
+ text-decoration: none;
+ display: inline-block;
+ padding: 2px;
+}
+.boton:hover{
+  background-color: var(--color_border2);
+  border: 2 px solid yellowgreen;
+  color: var(--color_background);
+}

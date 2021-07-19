@@ -1,0 +1,66 @@
+:root {
+  --color_background: #fdf0d5;
+  --color_border1: #780000;
+  --color_border2: #003049;
+  --color_text1: #c1121f;
+  --color_text2: #0466c8;
+}
+
+
+body {
+  background-color: var(--color_background);
+}
+h1{
+  color: var(--color_text1);
+}
+ol {
+  color: var(--color_text2);
+  list-style: none; /*niguno porque nosotros lo vamos a personalizar*/
+  counter-reset: contador; /*con esto estamos diciendo que vamos a usar 
+  una variable que se llama contador, que se "reset", resetea, cada vez que se crea un elemento
+  lista ordenada*/
+}
+ol li{
+  counter-increment:contador; /*aca estamos diciendo que la variable contador
+  que se resetea a 0, cada vez que se crea un elmeneto ol, se incremente en uno
+  por cada elemento li, dentro de ol*/
+}
+ol li::before{ /*los "::" se llama selector, una especie de regex
+                en este caso vamos a personalizar algo antes de los elementos list item
+                dentro de nuestras order list*/
+  content: "curso " counter(contador) " - "; /*con content añadimos ese algo antes del item*/
+  /*vamos a usar un funcion "counter", para añadir un "contador", que añadira numeros
+  ese elemento, contador, es una variable para nuestra funcion "counter, pero esto
+  se debe especificar dentro de nuestro elemento lista, que vamos a usar una variable
+  que se llama "contador""*/
+  color: var(--color_text1); /*con esto le estamos dando color a lo que estamos agregando
+  en este selector*/
+}
+ol li::after{ /*con este selector vamos a añadir algo despues del elemento*/
+  content:"."; /*un punto despues del contenido de list item*/
+
+}
+ul{
+  list-style-type:none;
+  background-color: var(--color_text2);
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+ul li{
+  background-color: var(--color_background);
+  color: var(--color_text2);
+}
+ul li a{
+  background-color: var(--color_text2);
+  color: var(--color_background);
+  text-align: center;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+  display: block;
+  padding: 15px;
+}
+ul li a:hover{
+  background-color: var(--color_border1);
+}

@@ -1,0 +1,39 @@
+:root {
+  --color_background: #fdf0d5;
+  --color_border1: #780000;
+  --color_border2: #003049;
+  --color_text1: #c1121f;
+  --color_text2: #0466c8;
+}
+
+
+body {
+  background-color: var(--color_background);
+}
+h1{
+  color: var(--color_text1);
+}
+ul{
+  list-style-type:none; /*por defecto es disc*/
+  background-color: var(--color_border2);
+  overflow: hidden; /*con esto le damos una especie de seccion indepeniente, y los escondemos
+                    eso se usa similar a como se usan los scrolls en las paginas web*/
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  color: var(--color_text2);
+  float: left;
+}
+li a{ /*se esta seleccionando solamente los elementos ancla, o enlaces, que 
+      aparecen dentro de los elimentos list item, con esto no se aplica a absolutamente todos
+      los elementos ancla*/
+  display: block;
+  text-align: center;
+  color: var(--color_background);
+  padding: 15px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: var(--color_border1);
+}

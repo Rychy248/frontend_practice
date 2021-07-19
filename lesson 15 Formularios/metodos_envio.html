@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <h1>Formulario en HTML</h1>
+    <!--si no se especifica el metodo, por defecto es el metodo GET-->
+    <!--GET, se envia por la URL-->
+    <!--POST, se envia por el cuerpo del mensaje y escondido-->
+    <form method="POST">
+        <a href="index.html">Registrarse</a>
+        <h1>LOGIN</h1>
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo"
+        placeholder="example@gmail.com" required="True"/>
+        <br/>
+        <!-- con step="any", ademas de positivos, se aceptan racionales-->
+        <label for="teleofono">telefono</label>
+        <input type="number" id="telefono" name="telefono"
+        placeholder="1231231" required="True" step="any"/>
+        <br/>
+        <label for="password">Password</label>
+        <!--El tipo password, evita que se muestre los datos al escribir-->
+        <input type="password" id="password" name="password"
+         requeried="True" placeholder="Contraseña"/>
+        <br/>
+        <input type="submit" value="Enviar" />
+    </form>
+    
+</body>
+
+</html>
