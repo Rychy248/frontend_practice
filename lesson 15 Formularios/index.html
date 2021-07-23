@@ -11,27 +11,77 @@
 
 <body>
     <h1>Formulario en HTML</h1>
+    <a href="metodos_envio.html">logearse</a>
     <!--para validar en general el formulario puede darse ese valor directamente en
     la etiqueta de validar el formulario, 
     novalidate=no requerira ningun campo validacion validate=requerira validacion todos los campos del formulario
     estos incluso tienen dominancia sobre los que le demos validate, aunque la regla se puede faltar en
     los botones-->
     <!-- <form novalidate> -->
-    <form>
-        <a href="metodos_envio.html">logearse</a>
-        <h1>NOMBRES</h1>
-        <!--Con for relacionamos un label con un input-->
-        <!--con id hacemos un elemento unico, con el name, lo enviamos al servidor-->
-        <!--requeried, sirve para validar formularios, true requerido false si no lo es-->
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre"
-        placeholder="Escribe tu apellido" required="True"/>
-        <br/>
-        <label for="apellido">Apellido</label>
-        <input type="text" value="tu apellido" id="apellido" name="apellido" requeried="True"/>
-        <br/>
-        <input type="submit" value="Enviar" />
-        <input type="submit" value="Enviar sin validar" formnovalidate="formnovalidate"/>
+    <h1>Registrarse</h1>
+    <br/><br/>
+    <form action="mi_servidor">
+        <fieldset>
+            <legend>Registrarse</legend>
+            <!--Con for relacionamos un label con un input-->
+            <!--con id hacemos un elemento unico, con el name, lo enviamos al servidor-->
+            <!--requeried, sirve para validar formularios, true requerido false si no lo es-->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre"
+            placeholder="Escribe tu apellido" required="True"/>
+            <br/>
+            <label for="apellido">Apellido</label>
+            <input type="text" value="tu apellido" id="apellido" name="apellido" requeried="True"/>
+            <br/><br/>
+            <!--Para que se envie un solo valor, el name, debe ser uno solo-->
+            <label>Genero</label><br>
+            <input type="radio" id="femenino" name="genero" value="femenino"/>
+            <label for="femenino">Femenino</label><br/>
+            <input type="radio" id="masculino" name="genero" value="masculino"/>
+            <label for="masculino">Masculino</label><br/>
+            <br/>
+            <!--Musica favorita, en name debe ser igual, para que se relacione, y se en envie un
+            solo checkbox, a diferencia del radio button, permite seleccionar mas de una opcion-->
+            <label>Genero Musica Favorita</label><br/>
+            <input type="checkbox" id="clasica" name="musica" value="clasica"/>
+            <label for="clasica">Clasica</label><br/>
+            <input type="checkbox" id="jazz" name="musica" value="jazz"/>
+            <label for="jazz">Jazz</label><br/>
+            <input type="checkbox" id="rock" name="musica" value="rock"/>
+            <label for="rock">Rock</label><br/>
+            <br/>
+            <!--El select permite al usuario elegir entre varias opciones-->
+            <label for="autos">Marca de auto favorita:</label><br/>
+            <select id="autos" name="autos">
+                <option value="volvo">Volvo</option> <!--Lo que se envia es el valor en value, no el texto-->
+                <option value="Audi" selected="True">Audi</option>
+                <option value="Ferrai">Ferrari</option>
+                <!--De manera automatica se selecciona la primera opcion por defeto
+                si queremos que esta propiedad cambie la opcion selected="True"-->
+            </select><br/>
+            <label for="colores">Elige tus colores favoritos:</label><br/>
+            <select id="colores" name="colores" multiple="True">
+                <option value="rojo">Rojo</option>
+                <option value="amarillo" selected="True">Amarillo</option>
+                <option value="azul">Azul</option>
+                <!--para seleccinar mas de una opcion, le añadimos el atributo multiple="True"-->
+                <!--para una seleccion aca se usa, ctrl+click-->
+            </select><br/>
+            <br/>
+            <!--Text area-->
+            <label for="comentario">Deja un comentario</label><br/>
+            <!--en os textare se puede especificar cuantas filas y columnas debe tener
+            rows=filas deseadas, cols=columnas deseadas, las filas y columnas en un inicio, esto varia segun
+            añada contenido el usuario-->
+            <textarea id="comentario" name="comentario" rows="5" cols="30"
+            placeholder="Dejanos tu comentario"></textarea>
+            <!--todo lo que dejemos enmedio de las etiquetas, aparecera en el textarea, espacio tabulador etc..-->
+            <br/><br/>
+            <input type="submit" value="Enviar" />
+            <input type="submit" value="Enviar sin validar" formnovalidate="formnovalidate"/>
+            <!--con reset, se elimina todo lo que se ingreso al formulario-->
+            <input type="reset" value="Restablecer"/>
+        </fieldset>
     </form>
     
 </body>
