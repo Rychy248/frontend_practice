@@ -1,2 +1,2 @@
 # Frontend
-This is the repo for the paint store frontend
+This is a repo to store, all code related to the frontend course
